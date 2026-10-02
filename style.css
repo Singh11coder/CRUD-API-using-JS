@@ -64,6 +64,7 @@ form{
   display: flex;
   align-items: center;
   gap:10px;
+  border-radius:10px;
 }
 
 form button{

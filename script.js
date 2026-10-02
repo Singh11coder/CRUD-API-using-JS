@@ -25,10 +25,33 @@ form.addEventListener('submit',(e)=>{
               <h3>${arr[i].email}</h3>
            </div>
            <div class="btns">
-               <button id="one">Update</button>
-               <button id="two">Delete</button>
+               <button id="one" onclick="update()">Update</button>
+               <button id="two" onclick="del(${arr[i].id})">Delete</button>
            </div>
         </div>`
      }
      
 })
+
+function del(id){
+    let ans = arr.filter((val) => val.id !== id);
+    arr = ans;
+    console.log(id);
+    console.log(arr);
+    main.innerHTML = "";
+     for(let i=0;i<arr.length;i++){
+        main.innerHTML += `<div class="one">
+           <div class="two"> 
+              <img src="${arr[i].url}" width="250">
+           </div>
+           <div class="three">
+              <h1>${arr[i].name}</h1>
+              <h3>${arr[i].email}</h3>
+           </div>
+           <div class="btns">
+               <button id="one" onclick="update()">Update</button>
+               <button id="two" onclick="del(${arr[i].id})">Delete</button>
+           </div>
+        </div>`
+     }
+}

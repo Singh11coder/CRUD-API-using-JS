@@ -1,0 +1,88 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,body{
+  height:100%;
+  width:100%;
+}
+body{
+  background-color: black;
+  padding:50px;
+}
+.one{
+  width:300px;
+  background-color: rgb(63, 62, 62);
+  color:white;
+  padding:25px;
+  border-radius:10px;
+}
+.btns{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top:20px;
+}
+.btns button{
+  height:30px;
+  width:90px;
+  border-radius:10px;
+  border:none;
+  font-size:18px;
+  color:white;
+}
+
+#one{
+   background-color: rgb(3, 170, 89);
+}
+
+#two{
+  background-color: rgb(124, 3, 3);
+}
+
+.btns button:hover{
+   height:30px;
+   width:100px;
+   cursor: pointer;
+}
+
+img{
+  border-radius: 10px;
+}
+input{
+  font-size:25px;
+  border-radius:10px;
+  padding-left:10px;
+}
+form{
+  height:80px;
+  padding:10px;
+  margin-bottom:20px;
+  background-color: rgb(71, 78, 76);
+  display: flex;
+  align-items: center;
+  gap:10px;
+}
+
+form button{
+  padding:10px 25px;
+  border-radius:10px;
+  border:none;
+  background-color: blue;
+  color:white;
+  font-size:20px;
+}
+
+form button:hover{
+  opacity:0.6;
+  cursor: pointer;
+}
+
+main{
+  padding-left:10px;
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+}

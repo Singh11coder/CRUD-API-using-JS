@@ -1,10 +1,11 @@
 let main = document.getElementById("container");
 let form = document.querySelector("form");
 
-let arr = [];
+let arr = JSON.parse(localStorage.getItem('arr')) || [];
 let isUpdate = null;
 
 function renderMain() {
+   
    main.innerHTML = "";
      for(let i=0;i<arr.length;i++){
         main.innerHTML += `<div class="one">
@@ -40,6 +41,8 @@ form.addEventListener('submit',(e)=>{
      }else{
          arr.push(obj);
      }
+
+     localStorage.setItem("arr",JSON.stringify(arr));
     
      e.preventDefault();
      renderMain();
@@ -64,3 +67,5 @@ function update(id){
     inputs[1].value = ans[0].email;
     inputs[2].value = ans[0].url;
 }
+
+renderMain();
